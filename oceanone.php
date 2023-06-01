@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/boxicons.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <title>Static Landing Page</title>
+   </head>
+   <body data-bs-spy="scroll" data-bs-target=".navbar">
+
+      <!-- Navigation bar -->
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+         <div class="container">
+            <a class="navbar-brand logo-text" href="#"><img src="icons/logo.png" class="logo-img"><span style="color: rgb(83, 94, 178);">OCEAN</span>ONE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="#actions">Actions</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#resources">Resources</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#projects">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#form">Explore</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+
+   <!-- Home -->
+      <section id="home">
+         <div class="container text-center">
+            <div class="row justify-content-center">
+               <div class="col-md-10">
+                  <h1 class="text-white display-4">SAVE THE OCEAN</h1>
+                  <p class="text-white">Protect our ocean, preserve our planet</p>
+                  <a href="#form" class="btn btn-brand">TAKE ACTION</a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+   <!-- Actions -->
+      <section id="actions">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4 section-intro-action">
+                  <h3>OFFSET YOUR <br> PLASTIC FOOTPRINT</h3>
+               </div>
+            </div>
+            <div class="row">
+                <?php
+                    include "conn.php";
+                    $sql = "SELECT * FROM section2";
+                    $result = mysqli_query($conn, $sql);
+
+                    foreach ($result as $row) {
+                        echo "
+                        <div class='col-lg-4 col-sm-6 p-4'>
+                            <h4 class='title-sm mt-4'>". $row['title'] ."</h4>
+                            <p>". $row['textContent'] ."</p>
+                            <a href='#' class='btn btn-brand mt-4'>". $row['button'] ."</a>
+                        </div>
+                        ";
+                    }
+                ?>
+            </div>
+         </div>
+      </section>
+
+   <!-- Resources -->
+      <section id="resources">
+         <div class="container">
+            <div class="row text-center align-items-center">
+               <div class="col-12 section-intro">
+                  <h3>MAKE YOUR IMPACT</h3>
+               </div>
+            </div>
+            <div class="items text-center">
+               <div class="row">
+                  <div class="col-lg-4 col-sm-6 p-4">
+                     <img src="icons/commit.png" width="40%">
+                     <h2 class="title-sm mt-4">COMMIT TO REMOVING A SPECIFIC AMOUNT</h2>
+                  </div>
+                  <div class="col-lg-4 col-sm-6 p-4">
+                     <img src="icons/product.png" width="40%">
+                     <h2 class="title-sm mt-4">THE REMOVAL TO PRODUCT SALES</h2>
+                  </div>
+                  <div class="col-lg-4 col-sm-6 p-4">
+                     <img src="icons/community.png" width="40%">
+                     <h4 class="title-sm mt-4">INCENTIVIZE COMMUNITY ACTION</h4>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+   <!-- Projects -->
+      <section id="projects">
+         <div class="container">
+            <div class="row">
+               <h6>Project 1 :</h6>
+               <h4>Oceanbound Clean Up</h4>
+               <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                  <div class="col-lg-6">
+                     <img class="img-fluid" src="images/plastic.jpg">
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="text-center h-100 project">
+                        <div class="d-flex h-100">
+                           <div class="project-text w-100 my-auto text-center text-lg-left">
+                              <h6>Problems</h6>
+                              <p class="problems">
+                                 Plastic recycling generates plastic waste effluent as a standard part of the process.
+                                 This dirty discharge known as "Mud" is at risk of being discharged into the wastewater and,
+                                 in the best-case, is usually taken to the nearest landfill.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                  <div class="col-lg-6">
+                     <div class="text-center h-100 project">
+                        <div class="d-flex h-100">
+                           <div class="project-text w-100 my-auto text-center text-lg-left">
+                              <h6>Solutions</h6>
+                              <p class="solutions">
+                                 Repurposes the “Mud” into useful building materials. It's composition is perfect for producing bricks!
+                                 Unfortunately, these recycled plastic compound bricks are slightly more expensive than standard building 
+                                 bricks, so Impac+ program incentivizes the reuse of the “Mud” in the bricks by making them competitive 
+                                 on the open market.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-6">
+                     <img class="img-fluid" src="images/building.jpg">
+                  </div>
+               </div>
+            </div>
+
+            <div class="row">
+               <h6>Project 2 :</h6>
+               <h4>Fishing Net Recovery</h4>
+               <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                  <div class="col-lg-6">
+                     <img class="img-fluid" src="images/net.jpg">
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="text-center h-100 project">
+                        <div class="d-flex h-100">
+                           <div class="project-text w-100 my-auto text-center text-lg-left">
+                              <h6>Problems</h6>
+                              <p class="problems">
+                                 Fishing gear - nets and ropes - pose a significant risk to sea life if cut away in the ocean.
+                                 Unfortunately, incentives do not exist to recover this gear so at the end of its life,
+                                 most gets landfilled or simply cut away at sea. It's a huge reason for why fishing nets
+                                 are the largest ocean plastic polluter.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                  <div class="col-lg-6">
+                     <div class="text-center h-100 project">
+                        <div class="d-flex h-100">
+                           <div class="project-text w-100 my-auto text-center text-lg-left">
+                              <h6>Solutions</h6>
+                              <p class="solutions">
+                                 We provides the funds needed to incentivize collection and recycling of this gear.
+                                 This program creates a pathway for the reclamation of end of life fishing gear.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-6">
+                     <img class="img-fluid" src="images/ocean.jpg">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+   <!-- Maps and Form -->
+      <section id="form">
+         <div class="container">
+         <div class="row align-items-center">
+               <div class="row text-center align-items-center">
+                  <div class="col-12 section-intro">
+                     <h3>GET IN TOUCH</h3>
+                  </div>
+               </div>
+            <div class="col-lg-6 order-lg-1">
+               <div class="map-responsive">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.8117279700973!2d110.38096783523036!3d-7.769192537296381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59b3f36b86b5%3A0x844bba8a56cab01!2sDanau%20Lembah%20UGM!5e0!3m2!1sid!2sid!4v1683419223499!5m2!1sid!2sid" width="400" height="400" style="border:2;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+               <form>
+               <div class="mb-3">
+                  <small>Name</small>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Name">
+               </div>
+               <div class="mb-3">
+                  <small>Email</small>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@gmail.com">
+               </div>
+               <div class="mb-3">
+                  <small>Message</small>
+                  <textarea cols="30" rows="4" class="form-control" placeholder="Write Your Message Here..."></textarea>
+               </div>
+               <button type="submit" class="btn btn-brand">SEND</button>
+               </form>
+            </div>
+         </div>
+         </div>
+      </section>
+   
+   <!-- Footer -->
+   <footer>
+      <div class="container">
+         <div class="row justify-content-between gy-3">
+            <div class="col-md-6">
+               <a class="navbar-brand logo-text" href="#">
+                  <img src="icons/logo.png" class="waste.png">
+                  <span style="color: rgb(83, 94, 178);">OCEAN</span>ONE
+               </a>
+            </div>
+            <div class="col-auto">
+               <ul class="nav justify-content-end pb-3 mb-3">
+                  <li class="mb-0"><a href="#" class="nav-link px-2 text-muted">Newsletter</a></li>
+                  <li class="mb-0"><a href="#" class="nav-link px-2 text-muted">Privacy policy</a></li>
+                  <li class="mb-0"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
