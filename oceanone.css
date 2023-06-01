@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+   line-height: 1.8;
+   color: #898fa1;
+   font-size: 15px;
+   font-family: 'Lato', sans-serif;
+   background-color: #54b0b036;
+}
+
+h1,h2,h3,h4,h5,h6 {
+   font-weight: 700;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   color: #162e6e;
+}
+
+.title-sm {
+   font-size: 16px;
+   letter-spacing: 1px;
+}
+
+a {
+   font-weight: 700;
+   transition: all 0.4s ease;
+   text-decoration: none;
+}
+
+small {
+   font-size: 12px;
+   letter-spacing: 2px;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+
+section {
+   padding-top: 100px;
+}
+
+.navbar {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.logo-text {
+   font-size: 22px;
+   text-transform: uppercase;
+   color: #11245A !important;
+}
+.navbar .nav-link {
+   font-size: 12px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+   color: #344c8c;
+   text-decoration: underline;
+}
+
+#home {
+   background-image: linear-gradient(rgba(17, 36, 90, 0.5), rgba(181, 188, 208, 0.5)), url("background.jpg");
+   background-repeat: no-repeat;
+   min-height: 100vh;
+   background-size: auto;
+   background-position: center;
+   background-attachment: scroll;
+   display: flex;
+   align-items: center;
+}
+
+#home h1 {
+   font-weight: 700;
+}
+
+#home p {
+   max-width: 550px;
+   margin: 18px auto;
+}
+
+#action h3 {
+   text-align: left;
+   margin-bottom: 60px;
+}
+
+#projects .problems{
+   text-align: left;
+   padding-left: 20px;
+}
+
+#projects .solutions{
+   text-align: right;
+   padding-right: 20px;
+}
+
+#projects img .project{
+   max-width: 100%;
+   height: auto;
+}
+
+.btn {
+   font-weight: 700;
+   font-size: 12px;
+   text-transform: uppercase;
+   padding: 12px 28px;
+   border-radius: 70px;
+}
+
+.btn-brand {
+   background-color: #a8dce0;
+   color: #373535;
+}
+
+.btn-brand:hover {
+   background-color: rgba(242, 239, 240, 0.669);
+   color: #373535;
+}
+
+.section-intro {
+   text-align: center;
+   margin-bottom: 60px;
+}
+
+.section-intro-action {
+   text-align: left;
+   margin-bottom: 60px;
+}
+
+.section-intro .hline {
+   width: 120px;
+   height: 2px;
+   background-color: rgba(0, 0, 0, 0.1);
+   margin: 16px auto 0 auto;
+}
+
+.logo-img {
+   width: 50px;
+   height: 50px;
+ }
+
+form .form-control {
+   border-radius: 15px;
+}
+
+form .form-control:focus {
+   box-shadow: none;
+   border-color: rgba(17, 36, 90, 0.5);
+}
+
+form small {
+   color: #373535;
+}
+
+footer {
+   background-color: white;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
